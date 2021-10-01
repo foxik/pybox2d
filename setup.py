@@ -71,8 +71,9 @@ source_paths = [
     ]
 
 # glob all of the paths and then flatten the list into one
-box2d_source_files = [os.path.join(source_dir, swig_source)] + \
+box2d_source_files = ( #[os.path.join(source_dir, swig_source)] + \
     sum( [glob(os.path.join(path, "*.cpp")) for path in source_paths], [])
+)
 
 # arguments to pass to SWIG. for old versions of SWIG, -O (optimize) might not be present.
 # Defaults:
