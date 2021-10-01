@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/pybox2d/pybox2d.svg?branch=master)](https://travis-ci.org/pybox2d/pybox2d) [![Coverage Status](https://coveralls.io/repos/pybox2d/pybox2d/badge.svg?branch=master&service=github)](https://coveralls.io/github/pybox2d/pybox2d?branch=master)
+**This is a fork for a sole purpose of providing binary wheels also for Python 3.9 and 3.10**
 
 pybox2d
 -------
