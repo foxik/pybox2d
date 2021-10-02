@@ -102,16 +102,12 @@ pybox2d_extension = Extension(
     'Box2D._Box2D', box2d_source_files, extra_compile_args=extra_args,
     language='c++')
 
-LONG_DESCRIPTION = \
-""" 2D physics library Box2D %s for usage in Python.
+LONG_DESCRIPTION = """
+Custom-build wheels of pybox2d library.
 
-    After installing please be sure to try out the testbed demos.
-    They require either pygame or pyglet and are available on the
-    homepage or directly in this package.
-
-    pybox2d homepage: https://github.com/pybox2d/pybox2d
-    Box2D homepage: http://www.box2d.org
-    """ % (box2d_version,)
+pybox2d homepage: https://github.com/pybox2d/pybox2d
+Box2D homepage: http://www.box2d.org
+""".strip()
 
 CLASSIFIERS = [
     "Development Status :: 4 - Beta",
@@ -129,13 +125,13 @@ write_init()
 
 print(setuptools.find_packages('library'))
 setup_dict = dict(
-    name             = "Box2D",
+    name             = "ufal.pybox2d",
     version          = version_str,
-    author           = "Ken Lauer",
-    author_email     = "sirkne at gmail dot com",
-    description      = "Python Box2D",
+    author           = "Milan Straka",
+    author_email     = "straka@ufal.mff.cuni.cz",
+    description      = "Custom-build wheels of pybox2d library from http://github.com/pybox2d/pybox2d",
     license          = "zlib",
-    url              = "http://github.com/pybox2d/pybox2d",
+    url              = "http://github.com/foxik/pybox2d",
     long_description = LONG_DESCRIPTION,
     package_dir      = {'': 'library'},
     packages         = setuptools.find_packages(library_base),
