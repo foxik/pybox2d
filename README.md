@@ -1,4 +1,4 @@
-**This is a fork for a sole purpose of providing binary wheels also for Python 3.9 and 3.10**
+**This is a fork for a sole purpose of providing binary wheels also for Python 3.9+ and ARM64.**
 
 pybox2d
 -------
