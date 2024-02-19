@@ -18,7 +18,7 @@ jobs:
         env:
           CIBW_BUILD: "cp3*"
           CIBW_ARCHS_MACOS: "x86_64 arm64"
-          CIBW_ENVIRONMENT_WINDOWS: "CL=-d2FH4-"
+          CIBW_ENVIRONMENT_WINDOWS: "CL=-d2FH4- -MT"
           CIBW_BUILD_VERBOSITY: 3
 
       - uses: actions/upload-artifact@v3
