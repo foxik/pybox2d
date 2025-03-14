@@ -22,5 +22,5 @@ jobs:
 
       - uses: actions/upload-artifact@v4
         with:
-          name: pybox2d-wheels-${{ matrix.os }}-${{ strategy.job-index }}
+          name: pybox2d-wheels-${{ matrix.os }}
           path: ./wheelhouse/*.whl
