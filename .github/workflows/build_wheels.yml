@@ -8,13 +8,13 @@ jobs:
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
-        os: [ubuntu-latest, windows-latest, macos-13, macos-14]
+        os: [ubuntu-latest, ubuntu-24.04-arm, windows-latest, macos-13, macos-14]
 
     steps:
       - uses: actions/checkout@v4
 
       - name: Build wheels
-        uses: pypa/cibuildwheel@v2.22.0
+        uses: pypa/cibuildwheel@v2.23.0
         env:
           CIBW_BUILD: "cp3*"
           CIBW_ENVIRONMENT_WINDOWS: "CL=-d2FH4- _CL_=-MT"
@@ -22,5 +22,5 @@ jobs:
 
       - uses: actions/upload-artifact@v4
         with:
-          name: pybox2d-wheels-${{ matrix.os }}
+          name: pybox2d-wheels-${{ matrix.os }}-${{ strategy.job-index }}
           path: ./wheelhouse/*.whl
